@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <ImageView
+            android:id="@+id/imageYemek"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/rounded_corner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textYemekAdi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Yemek Adı"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@+id/buttonSil"
+            app:layout_constraintStart_toEndOf="@+id/imageYemek"
+            app:layout_constraintTop_toTopOf="@+id/imageYemek" />
+
+        <TextView
+            android:id="@+id/textYemekFiyat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="0 ₺"
+            android:textSize="14sp"
+            android:textColor="@color/design_default_color_primary"
+            app:layout_constraintEnd_toStartOf="@+id/buttonSil"
+            app:layout_constraintStart_toStartOf="@+id/textYemekAdi"
+            app:layout_constraintTop_toBottomOf="@+id/textYemekAdi" />
+
+        <TextView
+            android:id="@+id/textAdet"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Adet: 1"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@+id/buttonSil"
+            app:layout_constraintStart_toStartOf="@+id/textYemekAdi"
+            app:layout_constraintTop_toBottomOf="@+id/textYemekFiyat" />
+
+        <TextView
+            android:id="@+id/textToplamFiyat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Toplam: 0 ₺"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/design_default_color_primary"
+            app:layout_constraintEnd_toStartOf="@+id/buttonSil"
+            app:layout_constraintStart_toStartOf="@+id/textYemekAdi"
+            app:layout_constraintTop_toBottomOf="@+id/textAdet" />
+
+        <ImageView
+            android:id="@+id/buttonSil"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_delete"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

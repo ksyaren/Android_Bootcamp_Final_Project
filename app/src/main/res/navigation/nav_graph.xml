@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/anasayfaFragment">
+
+    <fragment
+        android:id="@+id/anasayfaFragment"
+        android:name="com.example.foodorder.ui.fragment.AnasayfaFragment"
+        android:label="Anasayfa"
+        tools:layout="@layout/fragment_anasayfa">
+        <action
+            android:id="@+id/action_anasayfa_to_detay"
+            app:destination="@id/detayFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detayFragment"
+        android:name="com.example.foodorder.ui.fragment.DetayFragment"
+        android:label="Detay"
+        tools:layout="@layout/fragment_detay" />
+
+    <fragment
+        android:id="@+id/sepetFragment"
+        android:name="com.example.foodorder.ui.fragment.SepetFragment"
+        android:label="Sepet"
+        tools:layout="@layout/fragment_sepet" />
+
+</navigation>
